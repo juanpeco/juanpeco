@@ -1,1 +1,198 @@
+<!doctype html>
+<html lang="es" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Peco | Docente Innovador - Economía, Empresa y Turismo</title>
+  <meta name="description" content="Docente de Administración de Empresas, Economía e Innovación Educativa. IA educativa, simulaciones y metodologías activas para Bachillerato y FP." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-white">
+  <!-- HEADER FIJO -->
+  <header>
+    <div class="header-content">
+      <div class="logo" style="font-weight: 800; font-size: 1.25rem; color: #7c3aed;">
+        JUANPECO
+      </div>
+
+      <nav class="hidden md:block" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobremi">Sobre mí</a></li>
+          <li><a href="#impacto">Impacto</a></li>
+          <li><a href="#innovacion">Innovación</a></li>
+          <li><a href="#prompts">Biblioteca IA</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Abrir menú"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+        type="button"
+      >☰</button>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menú móvil">
+    <a href="#inicio" class="mobile-link">Inicio</a>
+    <a href="#sobremi" class="mobile-link">Sobre mí</a>
+    <a href="#impacto" class="mobile-link">Impacto</a>
+    <a href="#innovacion" class="mobile-link">Innovación</a>
+    <a href="#prompts" class="mobile-link">Biblioteca IA</a>
+    <a href="#contacto" class="mobile-link">Contacto</a>
+  </div>
+
+  <main class="w-full overflow-hidden">
+    <!-- HERO -->
+    <section id="inicio" class="hero section-pad">
+      <div class="container">
+        <div class="hero-content">
+          <div>
+            <h1 id="hero-title" style="color:#7c3aed;font-weight:800;font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.2;margin-bottom:1rem;">
+              Docente de Administración de Empresas, Economía e Innovación Educativa
+            </h1>
+
+            <p id="hero-subtitle" style="font-size:1.15rem;color:#7c3aed;font-weight:600;margin-bottom:1.5rem;">
+              IA educativa, simulaciones empresariales y metodologías activas aplicadas a Bachillerato y Formación Profesional.
+            </p>
+
+            <p id="hero-description" style="font-size:1rem;color:#374151;line-height:1.8;margin-bottom:2rem;max-width:700px;">
+              Desarrollo experiencias de aprendizaje basadas en simulaciones económicas, inteligencia artificial y proyectos empresariales reales. Además participo en el programa Código Escuela 4.0, acompañando a centros educativos en la integración de tecnología en el aula.
+            </p>
+
+            <div class="cta-group">
+              <button class="btn btn-primary" data-scroll="#prompts" type="button">Explorar recursos</button>
+              <button class="btn btn-secondary" data-scroll="#contacto" type="button">Contactar</button>
+            </div>
+          </div>
+
+          <!-- (Tu hero visual se queda igual: lo he movido a CSS + mantengo inline de tus órbitas por simplicidad) -->
+          <div class="hero-img">
+            <!-- ... PEGA AQUÍ TU BLOQUE COMPLETO DE ÓRBITAS/EMOJIS SIN CAMBIOS ... -->
+            <!-- Importante: conserva los @keyframes del hero en styles.css (ya van incluidos) -->
+            <div style="position: relative; width: 100%; height: 100%; display:flex; align-items:center; justify-content:center; min-height:400px;">
+              <div style="position:absolute;width:320px;height:320px;background:radial-gradient(circle, rgba(0,102,204,0.15) 0%, transparent 70%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(40px);"></div>
+              <div style="position:absolute;width:320px;height:320px;border:2px solid rgba(0,102,204,0.2);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 40s linear infinite;opacity:0.6;"></div>
+              <div style="position:absolute;width:240px;height:240px;border:2px solid rgba(255,140,0,0.15);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 25s linear reverse;opacity:0.8;"></div>
+              <div style="position:absolute;width:160px;height:160px;border:1.5px dashed rgba(0,102,204,0.25);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 15s linear infinite;opacity:0.9;"></div>
+
+              <div style="position:relative;z-index:15;display:flex;align-items:center;justify-content:center;">
+                <div style="position:absolute;width:120px;height:120px;border:3px solid rgba(0,102,204,0.4);border-radius:50%;animation:pulse 2.5s ease-in-out infinite;"></div>
+                <div style="position:absolute;width:100px;height:100px;border:2px solid rgba(255,140,0,0.2);border-radius:50%;animation:pulse 2.5s ease-in-out infinite;animation-delay:0.4s;"></div>
+                <div style="position:relative;width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-size:3rem;animation:float 4s ease-in-out infinite;text-shadow:0 0 20px rgba(0,102,204,0.5),0 0 40px rgba(0,102,204,0.2);">🌐</div>
+              </div>
+
+              <!-- órbitas 1..6 (sin cambios) -->
+              <!-- ... pega tu contenido de órbitas tal cual ... -->
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">📚</div>
+            <div class="stat-number">1500+</div>
+            <div class="stat-label">Prompts educativos</div>
+          </div>
+          <div class="stat-card">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">🏫</div>
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Centros educativos</div>
+          </div>
+          <div class="stat-card">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">🎯</div>
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Recursos didácticos</div>
+          </div>
+          <div class="stat-card">
+            <div style="font-size: 2rem; margin-bottom: 0.75rem;">✨</div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Innovación educativa</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- El resto de secciones: puedes dejarlas igual. Solo asegúrate de NO volver a meter SDK scripts. -->
+    <!-- ... PEGA TUS SECCIONES "sobremi", "vision", "impacto", etc. SIN CAMBIOS ... -->
+
+    <!-- BIBLIOTECA -->
+    <section id="prompts" class="section-pad">
+      <div class="container">
+        <h2 class="section-title">Biblioteca de Prompts IA</h2>
+        <p class="section-subtitle">1500+ prompts listos para usar en clase</p>
+
+        <div class="filter-group">
+          <select id="categoryFilter">
+            <option value="">Todas las categorías</option>
+            <option value="economia">Economía</option>
+            <option value="empresa">Empresa</option>
+            <option value="marketing">Marketing</option>
+            <option value="turismo">Turismo</option>
+            <option value="educacion">Educación</option>
+          </select>
+
+          <select id="iaFilter">
+            <option value="">Todas las IA</option>
+            <option value="ChatGPT">ChatGPT</option>
+            <option value="Claude">Claude</option>
+            <option value="Gemini">Gemini</option>
+            <option value="Perplexity">Perplexity</option>
+          </select>
+
+          <select id="levelFilter">
+            <option value="">Todos los niveles</option>
+            <option value="ESO">ESO</option>
+            <option value="Bachillerato">Bachillerato</option>
+            <option value="FP">FP</option>
+            <option value="Universidad">Universidad</option>
+            <option value="Docentes">Docentes</option>
+          </select>
+        </div>
+
+        <div class="grid-4" id="promptsContainer"></div>
+        <button class="load-more-btn" id="loadMorePrompts" type="button">⬇ Mostrar más prompts</button>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section-pad bg-accent">
+      <div class="container">
+        <h2 class="section-title">Blog Educativo</h2>
+        <p class="section-subtitle">Artículos prácticos para docentes</p>
+        <div class="grid-3" id="blogContainer"></div>
+        <button class="load-more-btn" id="loadMoreBlog" type="button">⬇ Ver más artículos</button>
+      </div>
+    </section>
+
+    <!-- CONTACTO (tu sección igual, pero: si no envías nada, acláralo o implementa envío real) -->
+    <!-- ... PEGA TU CONTACTO ... -->
+  </main>
+
+  <footer>
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+      <p style="margin-bottom: 0.5rem;" id="footer-text">© 2025 Juan Peco. Docente especializado en Economía, Empresa y Turismo.</p>
+      <p style="color: #aaa; font-size: 0.9rem;">Innovación educativa + IA aplicada + Metodología activa</p>
+      <p style="color: #aaa; font-size: 0.85rem; margin-top: 1rem;">
+        📧 hola@juanpeco.es • 📱 647 03 37 46 • 🔗
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color: #00B4D8;">LinkedIn: @juanpeco</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
