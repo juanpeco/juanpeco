@@ -1,0 +1,184 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; width: 100%; }
+body { font-family: 'Geist', sans-serif; }
+
+/* HEADER */
+header {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,102,204,0.12);
+  height: 65px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.header-content {
+  max-width: 1400px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 1.5rem; height: 100%;
+}
+.logo { height: 40px; display:flex; align-items:center; }
+
+nav ul { list-style:none; display:flex; gap:0.5rem; align-items:center; }
+nav a {
+  text-decoration:none; color:#555; font-weight:500; font-size:0.85rem;
+  padding:0.6rem 0.9rem; border-radius:6px; transition: all 0.25s ease;
+  white-space: nowrap;
+}
+nav a:hover { color:#0066CC; background: rgba(0,102,204,0.08); }
+
+.hamburger {
+  display:none;
+  background:none; border:none;
+  font-size:1.3rem; cursor:pointer;
+  color:#0066CC;
+  width:40px; height:40px;
+  align-items:center; justify-content:center;
+  transition: all 0.3s;
+}
+.hamburger:active { transform: scale(0.95); }
+
+.mobile-menu {
+  display:none;
+  position: fixed;
+  top:65px; left:0; right:0;
+  background:white;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0,102,204,0.12);
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  animation: slideDown 0.3s ease-out;
+}
+.mobile-menu.active { display:flex; }
+.mobile-menu a {
+  display:block;
+  padding:0.9rem 1.5rem;
+  text-decoration:none;
+  color:#555;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  font-weight:500;
+  font-size:0.9rem;
+  transition: all 0.25s;
+}
+.mobile-menu a:hover { background: rgba(0,102,204,0.08); color:#0066CC; padding-left:2rem; }
+
+@media (max-width: 768px) {
+  nav { display:none; }
+  .hamburger { display:flex; }
+}
+
+main { margin-top: 65px; }
+
+.container { max-width:1400px; margin:0 auto; padding:0 1.5rem; }
+.section-pad { padding: 6rem 0; }
+@media (max-width: 768px) { .section-pad { padding: 4rem 0; } }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%); border-bottom:1px solid rgba(0,102,204,0.1); }
+.hero-content { display:grid; grid-template-columns: 1fr 1fr; gap:3rem; align-items:center; }
+@media (max-width: 768px) {
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-img { order: -1; }
+}
+
+.cta-group { display:flex; gap:1rem; flex-wrap:wrap; }
+.btn {
+  padding:0.875rem 1.75rem;
+  border-radius:8px;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  transition: all 0.3s;
+  text-decoration:none;
+  display:inline-block;
+  font-size:0.95rem;
+}
+.btn-primary { background:#7c3aed; color:white; box-shadow: 0 4px 12px rgba(124,58,237,0.3); }
+.btn-primary:hover { background:#6d28d9; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(124,58,237,0.4); }
+.btn-secondary { border:2px solid #7c3aed; color:#7c3aed; background:white; }
+.btn-secondary:hover { background: rgba(124,58,237,0.08); }
+
+.stats-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1.5rem; margin-top:4rem; }
+.stat-card { background:white; padding:1.5rem; border-radius:12px; border:1px solid rgba(0,102,204,0.1); text-align:center; }
+.stat-number { font-size:2.5rem; font-weight:800; color:#0066CC; }
+.stat-label { color:#666; font-size:0.9rem; margin-top:0.5rem; }
+
+.section-title { font-size: clamp(2rem, 4vw, 3rem); font-weight:800; color:#7c3aed; margin-bottom:0.5rem; }
+.section-subtitle { font-size:1.1rem; color:#666; margin-bottom:3rem; }
+
+/* CARDS/GRIDS */
+.card { background:white; border-radius:12px; padding:1.5rem; border:1px solid rgba(0,0,0,0.08); transition: all 0.3s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,102,204,0.12); }
+.card-title { font-size:1.1rem; font-weight:700; color:#0a0e27; margin-bottom:0.75rem; }
+.card-text { color:#666; font-size:0.95rem; line-height:1.6; }
+.grid-3 { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; }
+.grid-4 { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem; }
+
+.filter-group { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:2rem; }
+.filter-group select {
+  padding:0.75rem 1rem;
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  background:white;
+  font-size:0.9rem;
+  cursor:pointer;
+  transition: all 0.3s;
+}
+.filter-group select:hover, .filter-group select:focus {
+  border-color:#0066CC;
+  box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
+  outline:none;
+}
+
+.load-more-btn {
+  display:block;
+  margin:3rem auto 0;
+  padding:1rem 2rem;
+  background:#7c3aed;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(124,58,237,0.3);
+}
+.load-more-btn:hover { background:#6d28d9; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(124,58,237,0.4); }
+.load-more-btn:disabled { background:#ccc; cursor:not-allowed; }
+
+/* BADGES (SIN TILDES) */
+.badge {
+  display:inline-block;
+  padding:0.35rem 0.75rem;
+  border-radius:20px;
+  font-size:0.75rem;
+  font-weight:600;
+  text-transform: uppercase;
+  letter-spacing:0.5px;
+}
+.badge-economia { background:#FEE2E2; color:#991B1B; }
+.badge-empresa { background:#DBEAFE; color:#1E40AF; }
+.badge-marketing { background:#CCFBF1; color:#134E4A; }
+.badge-turismo { background:#FEF3C7; color:#92400E; }
+.badge-educacion { background:#F3E8FF; color:#5B21B6; }
+
+/* FOOTER */
+footer { background:#0a0e27; color:white; padding:3rem 0 1rem; text-align:center; }
+footer a { color:#00B4D8; text-decoration:none; }
+footer a:hover { text-decoration: underline; }
+
+/* UTIL */
+.bg-accent { background: rgba(0,102,204,0.08); }
+.divider { height:1px; background: rgba(0,0,0,0.08); margin:3rem 0; }
+
+@keyframes slideDown { from { opacity:0; transform: translateY(-10px);} to { opacity:1; transform: translateY(0);} }
+
+/* ANIMACIONES HERO (tu bloque original) */
+@keyframes spin { from { transform: translate(-50%, -50%) rotate(0deg);} to { transform: translate(-50%, -50%) rotate(360deg);} }
+@keyframes float { 0%,100% { transform: translateY(0px);} 50% { transform: translateY(-15px);} }
+@keyframes pulse { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity:0.5;} 50% { transform: translate(-50%,-50%) scale(1.2); opacity:0.8;} }
+/* (si quieres, añade aquí el resto de keyframes orbit1..6 y partículas) */
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
