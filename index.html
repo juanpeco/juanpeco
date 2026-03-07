@@ -1045,151 +1045,190 @@
           <p class="section-subtitle">Más de 30 recursos visuales, simuladores y generadores. Se muestran 8 al inicio.</p>
         </div>
 
-        <div class="tools-grid" id="toolsContainer">
-          <article class="card tool-item">
-            <div class="card-icon">📊</div>
-            <h3 class="card-title">Simulador Oferta-Demanda</h3>
-            <div class="form-group">
-              <label for="priceSlider">Precio (€): <span id="priceVal">10</span></label>
-              <input type="range" id="priceSlider" min="1" max="20" value="10" oninput="updateOfferDemand()">
-            </div>
-            <div class="range-note">
-              <div>Demanda: <strong id="demandVal">100</strong> unidades</div>
-              <div style="margin-top:8px;">Oferta: <strong id="supplyVal">50</strong> unidades</div>
-              <div style="margin-top:10px; font-weight: 800; color: var(--secondary);" id="marketState">Déficit</div>
-            </div>
-          </article>
+ <div class="tools-grid" id="toolsContainer">
 
-          <article class="card tool-item">
-            <div class="card-icon">❓</div>
-            <h3 class="card-title">Quiz Económico</h3>
-            <div id="quizContent">
-              <p class="card-text">3 preguntas sobre conceptos económicos.</p>
-              <button class="btn btn-primary" style="width:100%; margin-top: 12px;" onclick="initQuiz()">Comenzar Quiz</button>
-            </div>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">📊</div>
+    <h3 class="card-title">Simulador Oferta-Demanda</h3>
+    <div class="form-group">
+      <label for="priceSlider">Precio (€): <span id="priceVal">10</span></label>
+      <input type="range" id="priceSlider" min="1" max="20" value="10" oninput="updateOfferDemand()">
+    </div>
+    <div class="range-note">
+      <div>Demanda: <strong id="demandVal">100</strong> unidades</div>
+      <div style="margin-top:8px;">Oferta: <strong id="supplyVal">50</strong> unidades</div>
+      <div style="margin-top:10px; font-weight: 800; color: var(--secondary);" id="marketState">Déficit</div>
+    </div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">📝</div>
-            <h3 class="card-title">Generador de Actividad</h3>
-            <div class="form-group">
-              <input type="text" id="actTopic" placeholder="Tema (ej: Inflación)">
-            </div>
-            <div class="form-group">
-              <select id="actLevel">
-                <option value="">Nivel...</option>
-                <option value="ESO">ESO</option>
-                <option value="Bachillerato">Bachillerato</option>
-                <option value="FP">FP</option>
-              </select>
-            </div>
-            <button class="btn btn-primary" style="width:100%;" onclick="generateActivity()">Generar</button>
-            <div id="actOutput" class="tool-output"></div>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">❓</div>
+    <h3 class="card-title">Quiz Económico</h3>
+    <div id="quizContent">
+      <p class="card-text">3 preguntas sobre conceptos económicos.</p>
+      <button class="btn btn-primary" style="width:100%; margin-top: 12px;" onclick="initQuiz()">Comenzar Quiz</button>
+    </div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">🏢</div>
-            <h3 class="card-title">Generador de Caso</h3>
-            <div class="form-group">
-              <input type="text" id="caseSector" placeholder="Sector">
-            </div>
-            <div class="form-group">
-              <input type="text" id="caseProblem" placeholder="Desafío">
-            </div>
-            <button class="btn btn-primary" style="width:100%;" onclick="generateCase()">Generar</button>
-            <div id="caseOutput" class="tool-output"></div>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">📝</div>
+    <h3 class="card-title">Generador de Actividad</h3>
+    <div class="form-group">
+      <input type="text" id="actTopic" placeholder="Tema (ej: Inflación)">
+    </div>
+    <div class="form-group">
+      <select id="actLevel">
+        <option value="">Nivel...</option>
+        <option value="ESO">ESO</option>
+        <option value="Bachillerato">Bachillerato</option>
+        <option value="FP">FP</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateActivity()">Generar</button>
+    <div id="actOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">✅</div>
-            <h3 class="card-title">Generador de Rúbrica</h3>
-            <div class="form-group">
-              <input type="text" id="rubricTitle" placeholder="Competencia a evaluar">
-            </div>
-            <button class="btn btn-primary" style="width:100%;" onclick="generateRubric()">Generar</button>
-            <div id="rubricOutput" class="tool-output"></div>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">🏢</div>
+    <h3 class="card-title">Generador de Caso</h3>
+    <div class="form-group">
+      <input type="text" id="caseSector" placeholder="Sector">
+    </div>
+    <div class="form-group">
+      <input type="text" id="caseProblem" placeholder="Desafío">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateCase()">Generar</button>
+    <div id="caseOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">📋</div>
-            <h3 class="card-title">Generador de Examen</h3>
-            <div class="form-group">
-              <input type="text" id="examTopic" placeholder="Tema">
-            </div>
-            <div class="form-group">
-              <select id="examLevel">
-                <option value="">Nivel...</option>
-                <option value="ESO">ESO</option>
-                <option value="Bachillerato">Bachillerato</option>
-                <option value="FP">FP</option>
-              </select>
-            </div>
-            <button class="btn btn-primary" style="width:100%;" onclick="generateExam()">Generar</button>
-            <div id="examOutput" class="tool-output"></div>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">✅</div>
+    <h3 class="card-title">Generador de Rúbrica</h3>
+    <div class="form-group">
+      <input type="text" id="rubricTitle" placeholder="Competencia a evaluar">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateRubric()">Generar</button>
+    <div id="rubricOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">🎯</div>
-            <h3 class="card-title">Generador de Objetivos SMART</h3>
-            <p class="card-text">Convierte una idea difusa en objetivos medibles para proyecto o unidad didáctica.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">📋</div>
+    <h3 class="card-title">Generador de Examen</h3>
+    <div class="form-group">
+      <input type="text" id="examTopic" placeholder="Tema">
+    </div>
+    <div class="form-group">
+      <select id="examLevel">
+        <option value="">Nivel...</option>
+        <option value="ESO">ESO</option>
+        <option value="Bachillerato">Bachillerato</option>
+        <option value="FP">FP</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateExam()">Generar</button>
+    <div id="examOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">📣</div>
-            <h3 class="card-title">Creador de Brief de Campaña</h3>
-            <p class="card-text">Base rápida para campañas de marketing, marca y propuesta de valor.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">🎯</div>
+    <h3 class="card-title">Generador de Objetivos SMART</h3>
+    <div class="form-group">
+      <input type="text" id="smartTopic" placeholder="Objetivo o proyecto">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateSmart()">Generar</button>
+    <div id="smartOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">📈</div>
-            <h3 class="card-title">Analizador de Rentabilidad</h3>
-            <p class="card-text">Plantilla para estimar costes, ingresos, márgenes y viabilidad básica.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">📣</div>
+    <h3 class="card-title">Creador de Brief de Campaña</h3>
+    <div class="form-group">
+      <input type="text" id="briefBrand" placeholder="Marca o proyecto">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateBrief()">Generar</button>
+    <div id="briefOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">🌍</div>
-            <h3 class="card-title">Mapa de Segmentación</h3>
-            <p class="card-text">Herramienta visual para definir públicos y criterios de segmentación.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">📈</div>
+    <h3 class="card-title">Analizador de Rentabilidad</h3>
+    <div class="form-group">
+      <input type="text" id="profitIdea" placeholder="Producto o servicio">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateProfit()">Generar</button>
+    <div id="profitOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">🧠</div>
-            <h3 class="card-title">Generador de Debate</h3>
-            <p class="card-text">Crea debates con posiciones enfrentadas, preguntas y roles para el aula.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">🌍</div>
+    <h3 class="card-title">Mapa de Segmentación</h3>
+    <div class="form-group">
+      <input type="text" id="segmentProduct" placeholder="Producto o servicio">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateSegment()">Generar</button>
+    <div id="segmentOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">🎨</div>
-            <h3 class="card-title">Creador de Marca</h3>
-            <p class="card-text">Base para naming, identidad verbal, valores y propuesta diferencial.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">🧠</div>
+    <h3 class="card-title">Generador de Debate</h3>
+    <div class="form-group">
+      <input type="text" id="debateTopic" placeholder="Tema del debate">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateDebate()">Generar</button>
+    <div id="debateOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">🎬</div>
-            <h3 class="card-title">Generador de Anuncio Viral</h3>
-            <p class="card-text">Estructura creativa para campañas con gancho, narrativa y CTA.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">🎨</div>
+    <h3 class="card-title">Creador de Marca</h3>
+    <div class="form-group">
+      <input type="text" id="brandIdea" placeholder="Idea de negocio">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateBrand()">Generar</button>
+    <div id="brandOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">💼</div>
-            <h3 class="card-title">Canvas de Modelo de Negocio</h3>
-            <p class="card-text">Bloques esenciales para diseñar y visualizar proyectos empresariales.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">🎬</div>
+    <h3 class="card-title">Generador de Anuncio Viral</h3>
+    <div class="form-group">
+      <input type="text" id="viralIdea" placeholder="Producto, marca o campaña">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateViral()">Generar</button>
+    <div id="viralOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">🧾</div>
-            <h3 class="card-title">Checklist de Proyecto</h3>
-            <p class="card-text">Lista rápida para validar si un proyecto está listo para presentar.</p>
-          </article>
+  <article class="card tool-item">
+    <div class="card-icon">💼</div>
+    <h3 class="card-title">Canvas de Modelo de Negocio</h3>
+    <div class="form-group">
+      <input type="text" id="canvasIdea" placeholder="Idea de negocio">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateCanvas()">Generar</button>
+    <div id="canvasOutput" class="tool-output"></div>
+  </article>
 
-          <article class="card tool-item">
-            <div class="card-icon">🏆</div>
-            <h3 class="card-title">Evaluador de Pitch</h3>
-            <p class="card-text">Criterios claros para valorar presentaciones, claridad, datos y persuasión.</p>
-          </article>
-        </div>
+  <article class="card tool-item">
+    <div class="card-icon">🧾</div>
+    <h3 class="card-title">Checklist de Proyecto</h3>
+    <div class="form-group">
+      <input type="text" id="checklistProject" placeholder="Proyecto o actividad">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generateChecklist()">Generar</button>
+    <div id="checklistOutput" class="tool-output"></div>
+  </article>
 
-        <button class="load-more-btn" id="loadMoreTools" onclick="loadMoreTools()">⬇ Mostrar más herramientas</button>
+  <article class="card tool-item">
+    <div class="card-icon">🏆</div>
+    <h3 class="card-title">Evaluador de Pitch</h3>
+    <div class="form-group">
+      <input type="text" id="pitchProject" placeholder="Proyecto o idea">
+    </div>
+    <button class="btn btn-primary" style="width:100%;" onclick="generatePitch()">Generar</button>
+    <div id="pitchOutput" class="tool-output"></div>
+  </article>
+</div>
       </div>
     </section>
 
