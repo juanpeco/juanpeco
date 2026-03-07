@@ -2032,6 +2032,228 @@ Valorar comprensión, aplicación y argumentación.`;
     renderBlog();
     renderTools();
     updateOfferDemand();
+    function showOutput(id, text) {
+  const out = document.getElementById(id);
+  out.textContent = text;
+  out.style.display = 'block';
+}
+
+function generateSmart() {
+  const topic = document.getElementById('smartTopic').value || 'Proyecto educativo';
+  showOutput('smartOutput', `OBJETIVOS SMART
+
+Proyecto: ${topic}
+
+S - Específico:
+Definir claramente qué se quiere lograr con ${topic}.
+
+M - Medible:
+Establecer indicadores concretos de logro.
+
+A - Alcanzable:
+Ajustar el reto al nivel del alumnado y al tiempo disponible.
+
+R - Relevante:
+Conectar la actividad con competencias reales y aprendizaje útil.
+
+T - Temporal:
+Fijar un plazo claro de ejecución y entrega.`);
+}
+
+function generateBrief() {
+  const brand = document.getElementById('briefBrand').value || 'Marca educativa';
+  showOutput('briefOutput', `BRIEF DE CAMPAÑA
+
+Marca / Proyecto: ${brand}
+
+1. Objetivo:
+Dar visibilidad y posicionar ${brand}.
+
+2. Público objetivo:
+Definir a quién se dirige y qué necesita.
+
+3. Mensaje clave:
+Qué idea principal debe recordar el público.
+
+4. Tono:
+Profesional, cercano, creativo o disruptivo.
+
+5. Canales:
+Instagram, TikTok, cartel, vídeo, presentación, web.
+
+6. CTA:
+Qué quieres que haga el público después de ver la campaña.`);
+}
+
+function generateProfit() {
+  const idea = document.getElementById('profitIdea').value || 'Producto';
+  showOutput('profitOutput', `ANÁLISIS BÁSICO DE RENTABILIDAD
+
+Producto / Servicio: ${idea}
+
+1. Costes fijos:
+Alquiler, herramientas, diseño, promoción.
+
+2. Costes variables:
+Producción por unidad, materiales, distribución.
+
+3. Precio de venta:
+Definir según valor percibido y mercado.
+
+4. Margen:
+Precio de venta - coste variable.
+
+5. Punto de equilibrio:
+Cuántas unidades debes vender para cubrir costes.
+
+6. Conclusión:
+¿Es rentable, mejorable o inviable?`);
+}
+
+function generateSegment() {
+  const product = document.getElementById('segmentProduct').value || 'Producto';
+  showOutput('segmentOutput', `MAPA DE SEGMENTACIÓN
+
+Producto / Servicio: ${product}
+
+1. Segmentación demográfica:
+Edad, nivel educativo, ingresos.
+
+2. Segmentación geográfica:
+Barrio, ciudad, zona turística, entorno digital.
+
+3. Segmentación psicográfica:
+Estilo de vida, intereses, valores.
+
+4. Segmentación conductual:
+Frecuencia de compra, motivaciones, uso.
+
+5. Cliente ideal:
+Define el perfil prioritario con mayor potencial.`);
+}
+
+function generateDebate() {
+  const topic = document.getElementById('debateTopic').value || 'IA en educación';
+  showOutput('debateOutput', `DEBATE GUIADO
+
+Tema: ${topic}
+
+Postura A:
+Argumentos a favor.
+
+Postura B:
+Argumentos en contra.
+
+Preguntas guía:
+1. ¿Qué beneficios genera?
+2. ¿Qué riesgos o límites presenta?
+3. ¿Qué posición defenderías y por qué?
+
+Cierre:
+Conclusión individual argumentada.`);
+}
+
+function generateBrand() {
+  const idea = document.getElementById('brandIdea').value || 'Nueva marca';
+  showOutput('brandOutput', `CREADOR DE MARCA
+
+Idea: ${idea}
+
+1. Nombre:
+Debe ser corto, memorable y diferenciador.
+
+2. Propuesta de valor:
+Qué problema resuelve y por qué destaca.
+
+3. Personalidad:
+Moderna, profesional, cercana, disruptiva, premium.
+
+4. Público objetivo:
+Quién la necesita.
+
+5. Claim:
+Frase breve con fuerza comercial.
+
+6. Identidad visual:
+Colores, estilo, símbolos y tono.`);
+}
+
+function generateViral() {
+  const idea = document.getElementById('viralIdea').value || 'Campaña';
+  showOutput('viralOutput', `ANUNCIO VIRAL
+
+Campaña / Producto: ${idea}
+
+1. Hook inicial:
+Impacto en los 3 primeros segundos.
+
+2. Problema:
+Qué tensión o necesidad detecta.
+
+3. Giro creativo:
+Elemento sorpresa o memorable.
+
+4. Mensaje principal:
+Claro, breve y emocional.
+
+5. Formato:
+Reel, TikTok, story, cartel animado o spot corto.
+
+6. CTA:
+Qué quieres que haga el usuario.`);
+}
+
+function generateCanvas() {
+  const idea = document.getElementById('canvasIdea').value || 'Idea de negocio';
+  showOutput('canvasOutput', `BUSINESS MODEL CANVAS
+
+Idea: ${idea}
+
+1. Propuesta de valor
+2. Segmentos de clientes
+3. Canales
+4. Relación con clientes
+5. Fuentes de ingresos
+6. Recursos clave
+7. Actividades clave
+8. Socios clave
+9. Estructura de costes`);
+}
+
+function generateChecklist() {
+  const project = document.getElementById('checklistProject').value || 'Proyecto';
+  showOutput('checklistOutput', `CHECKLIST DE PROYECTO
+
+Proyecto: ${project}
+
+✓ Objetivo definido
+✓ Público objetivo claro
+✓ Recursos identificados
+✓ Reparto de tareas hecho
+✓ Calendario definido
+✓ Producto final claro
+✓ Criterios de evaluación preparados
+✓ Presentación final lista`);
+}
+
+function generatePitch() {
+  const project = document.getElementById('pitchProject').value || 'Proyecto';
+  showOutput('pitchOutput', `EVALUADOR DE PITCH
+
+Proyecto: ${project}
+
+Criterios:
+1. Claridad de la idea
+2. Problema detectado
+3. Solución propuesta
+4. Diferenciación
+5. Viabilidad
+6. Comunicación verbal
+7. Impacto visual
+8. Capacidad de persuasión
+
+Valora cada criterio de 1 a 4.`);
+}
   </script>
 </body>
 </html>
